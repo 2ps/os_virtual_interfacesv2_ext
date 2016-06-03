@@ -53,8 +53,8 @@ def ip_address_formatter(field):
 
 
 @utils.arg('instance_id', metavar='<instance_id>',
-              help="ID of the instance you want to display virtual"
-                   "interfaces for")
+           help="ID of the instance you want to display virtual"
+                "interfaces for")
 def do_virtual_interface_list(cs, args):
     """
     Lists the virtual interfaces for an instance
@@ -66,9 +66,9 @@ def do_virtual_interface_list(cs, args):
 
 
 @utils.arg('network_id', metavar='<network_id>',
-              help='Network ID to connect the new virtual interface to')
+           help='Network ID to connect the new virtual interface to')
 @utils.arg('instance_id', metavar='<instance_id>',
-              help="Instance to attach the new virtual interface to")
+           help="Instance to attach the new virtual interface to")
 def do_virtual_interface_create(cs, args):
     """
     Add a new virtual interface to an instance
@@ -85,9 +85,9 @@ def do_virtual_interface_create(cs, args):
 
 
 @utils.arg('instance_id', metavar='<instance_id>',
-              help="Instance to remove the virtual interface from")
+           help="Instance to remove the virtual interface from")
 @utils.arg('interface_id', metavar='<interface_id>',
-              help='ID of the virtual interface to delete')
+           help='ID of the virtual interface to delete')
 def do_virtual_interface_delete(cs, args):
     """
     Removes the specified virtual interface from an instance
