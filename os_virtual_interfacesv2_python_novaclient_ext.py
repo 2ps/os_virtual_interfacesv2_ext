@@ -14,6 +14,12 @@
 
 from novaclient import base
 from novaclient import utils
+# pyrax consumers will have an older version of novaclient installed
+# so we have to make sure that the 'arg' decorator is supported
+# and available
+if not hasattr(utils, 'arg'):
+    del utils
+    from novaclient.openstack.common import cliutils as utils
 
 
 class VirtualInterface(base.Resource):
